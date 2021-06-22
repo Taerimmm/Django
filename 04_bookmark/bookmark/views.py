@@ -8,7 +8,11 @@ from django.shortcuts import render
 # 웹 페이지에 접속한다. -> 페이지를 본다.
 # URL을 입력 -> 웹 서버가 뷰를 찾아서 동작시킨다. -> 응답
 from django.views.generic.list import ListView
+from django.views.generic.edit import CreateView
 from .models import Bookmark
 
 class BookmarkListView(ListView):
+    model = Bookmark
+
+class BookmarkCreateView(CreateView):
     model = Bookmark
