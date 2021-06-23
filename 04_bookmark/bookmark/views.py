@@ -16,3 +16,6 @@ class BookmarkListView(ListView):
 
 class BookmarkCreateView(CreateView):
     model = Bookmark
+    fields = ['site_name', 'url']
+
+    template_name_suffix = '_create'
