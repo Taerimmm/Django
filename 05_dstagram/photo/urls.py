@@ -4,7 +4,6 @@ from django.views.generic.detail import DetailView
 from .views import *
 from .models import Photo
 
-# 2차 URL 파일
 app_name = 'photo'
 
 urlpatterns = [
