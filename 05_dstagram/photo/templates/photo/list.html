@@ -7,8 +7,14 @@
             <div class="col-md-2"></div>
             <div class="col-md-8 panel panel-default">
                 <p><img src="{{post.photo.url}}" style="width:100%;"></p>
-                <p><video src="{{post.photo.url}}" style="width:100%;"></p>
+                <div class="video_holder" style="max-width: 400px; max-height: px; margin: 0 auto;display: block">
+                    <video width="100%" controls="controls" muted="muted" preload="none" poster="">
+                        <source src="{{post.photo.url}}" type="video/mp4">
+                    </video>
+                </div>
+
                 <button type="button" class="btn btn-xs btn-info">
+<!--                    {{post.photo.url}}-->
                     {{post.author.username}}
                 </button>
                 <p>{{post.text|linebreaksbr}}</p>
